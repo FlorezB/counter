@@ -14,31 +14,23 @@ class App extends React.Component {
   }
 
   handleClick = () =>
-
+  
   this.setState({
     count: this.state.count + 1
-    // this.count
   })
 
 
-  handleClick2 = () =>
-
-  this.setState({
-    count: this.state.count - 1
-    // this.count
-  })
-
-
-  handleChange = e => {
-    console.log(e.target)
-    const inputValue = e.target.value
-    
-    this.setState({
-      count: inputValue
-    })
+  handleClick2 = () => {
+    if (this.state.count > 0) {
+      this.setState({
+        count: this.state.count - 1
+      })
+    }
   }
-
+  
   render () {
+    
+    console.log(this)
     return (
       <div className="container">
         <h1 className="mb-3">Counter</h1>
